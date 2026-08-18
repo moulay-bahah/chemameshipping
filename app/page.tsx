@@ -8,6 +8,7 @@ import {
   ChevronRight,
   Container,
   FileCheck2,
+  Mail,
   MapPin,
   Phone,
   Route,
@@ -16,9 +17,20 @@ import {
 } from "lucide-react";
 import { getSiteUrl } from "./site-url";
 
-const phoneDisplay = "+1 (571) 579-0904";
-const phoneHref = "tel:+15715790904";
+const phoneDisplay = "+1 (347) 671-1702";
+const phoneHref = "tel:+13476711702";
+const email = "Mouhidine.souvi@gmail.com";
+const emailHref = "mailto:Mouhidine.souvi@gmail.com";
+const facebookHref = "https://www.facebook.com/share/1FpTYprWFv/?mibextid=wwXIfr";
 const instagramHref = "https://www.instagram.com/mmcshipping?igsh=azk0MmgzYzgxNG81&utm_source=qr";
+
+function FacebookIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H7.7v3h2.7v8h3.1Z" />
+    </svg>
+  );
+}
 
 function InstagramIcon({ size = 20 }: { size?: number }) {
   return (
@@ -71,17 +83,21 @@ export default async function Home() {
     "@type": "Organization",
     name: "Chemame Shipping",
     url: siteUrl.href,
-    telephone: "+15715790904",
+    telephone: "+13476711702",
+    email,
     description:
       "Vehicle ocean shipping from the United States to African ports, with dedicated service to Mauritania.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "5713 Elliot Ct, Apt 173",
+      streetAddress: "4635 Seminary Rd, Apt 304",
+      addressLocality: "Alexandria",
+      addressRegion: "VA",
+      postalCode: "22304",
       addressCountry: "US",
     },
     areaServed: ["Africa", "Mauritania"],
     knowsAbout: ["Vehicle shipping", "Ocean freight", "Container shipping", "Ro-Ro shipping"],
-    sameAs: [instagramHref],
+    sameAs: [facebookHref, instagramHref],
   };
 
   return (
@@ -272,10 +288,16 @@ export default async function Home() {
             <div className="contact-details">
               <p>Call Chemame Shipping to discuss your vehicle, destination and preferred shipping method.</p>
               <a className="contact-phone" href={phoneHref}><Phone size={22} aria-hidden="true" />{phoneDisplay}</a>
-              <a className="contact-instagram" href={instagramHref} target="_blank" rel="noreferrer">
+              <a className="contact-social" href={emailHref}>
+                <Mail size={20} aria-hidden="true" /> {email}
+              </a>
+              <a className="contact-social" href={facebookHref} target="_blank" rel="noreferrer">
+                <FacebookIcon /> Follow us on Facebook
+              </a>
+              <a className="contact-social" href={instagramHref} target="_blank" rel="noreferrer">
                 <InstagramIcon /> Follow @mmcshipping on Instagram
               </a>
-              <address><MapPin size={20} aria-hidden="true" /><span>5713 Elliot Ct, Apt 173</span></address>
+              <address><MapPin size={20} aria-hidden="true" /><span>4635 Seminary Rd, Apt 304, Alexandria, VA 22304</span></address>
             </div>
           </div>
         </section>
@@ -290,12 +312,14 @@ export default async function Home() {
           <p>Vehicle ocean freight from the United States to Africa.</p>
           <div className="footer-links">
             <a href={phoneHref}>{phoneDisplay}</a>
+            <a href={emailHref}><Mail size={18} aria-hidden="true" /> {email}</a>
+            <a href={facebookHref} target="_blank" rel="noreferrer" aria-label="Chemame Shipping on Facebook"><FacebookIcon size={18} /> Facebook</a>
             <a href={instagramHref} target="_blank" rel="noreferrer" aria-label="Chemame Shipping on Instagram"><InstagramIcon size={18} /> Instagram</a>
           </div>
         </div>
         <div className="container footer-bottom">
           <span>© {new Date().getFullYear()} Chemame Shipping. All rights reserved.</span>
-          <span>5713 Elliot Ct, Apt 173</span>
+          <span>4635 Seminary Rd, Apt 304, Alexandria, VA 22304</span>
         </div>
       </footer>
 

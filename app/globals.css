@@ -177,9 +177,9 @@ h1 em { color: var(--orange); font-style: normal; }
 .contact-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 100px; }
 .contact-details > p { max-width: 500px; color: rgba(255,255,255,.64); line-height: 1.7; }
 .contact-phone { margin: 20px 0 18px; display: flex; align-items: center; gap: 14px; color: var(--orange); font-family: "Arial Narrow", Impact, sans-serif; font-size: clamp(28px, 4vw, 45px); letter-spacing: -.025em; }
-.contact-instagram { width: fit-content; margin: 0 0 20px; display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 13px; font-weight: 800; }
-.contact-instagram svg { color: var(--orange); }
-.contact-instagram:hover, .contact-instagram:focus-visible { color: var(--orange); }
+.contact-social { width: fit-content; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 13px; font-weight: 800; }
+.contact-social svg { color: var(--orange); }
+.contact-social:hover, .contact-social:focus-visible { color: var(--orange); }
 .contact-details address { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,.66); font-size: 14px; font-style: normal; }
 
 .site-footer { padding-top: 60px; color: var(--white); background: var(--navy-950); }
