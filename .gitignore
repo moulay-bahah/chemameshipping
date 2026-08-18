@@ -1,0 +1,9 @@
+node_modules
+.next
+.open-next
+.wrangler
+dist
+out
+.env*.local
+npm-debug.log*
+.DS_Store
