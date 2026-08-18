@@ -1,5 +1,5 @@
 {
-  "name": "mmc-shipping-corp",
+  "name": "chemame-shipping",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "build:worker": "opennextjs-cloudflare build",
     "preview:worker": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.2",

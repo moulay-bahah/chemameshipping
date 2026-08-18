@@ -18,6 +18,17 @@ import { getSiteUrl } from "./site-url";
 
 const phoneDisplay = "+1 (571) 579-0904";
 const phoneHref = "tel:+15715790904";
+const instagramHref = "https://www.instagram.com/mmcshipping?igsh=azk0MmgzYzgxNG81&utm_source=qr";
+
+function InstagramIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="18" height="18" x="3" y="3" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 const services = [
   {
@@ -58,7 +69,7 @@ export default async function Home() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "MMC Shipping Corp",
+    name: "Chemame Shipping",
     url: siteUrl.href,
     telephone: "+15715790904",
     description:
@@ -70,6 +81,7 @@ export default async function Home() {
     },
     areaServed: ["Africa", "Mauritania"],
     knowsAbout: ["Vehicle shipping", "Ocean freight", "Container shipping", "Ro-Ro shipping"],
+    sameAs: [instagramHref],
   };
 
   return (
@@ -81,10 +93,10 @@ export default async function Home() {
 
       <header className="site-header">
         <div className="container nav-wrap">
-          <a className="brand" href="#top" aria-label="MMC Shipping Corp home">
+          <a className="brand" href="#top" aria-label="Chemame Shipping home">
             <span className="brand-mark" aria-hidden="true"><Anchor size={25} strokeWidth={2.25} /></span>
             <span className="brand-copy">
-              <strong>MMC SHIPPING CORP</strong>
+              <strong>CHEMAME SHIPPING</strong>
               <small>Cars to Africa & Mauritania</small>
             </span>
           </a>
@@ -94,7 +106,10 @@ export default async function Home() {
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </nav>
-          <a className="nav-call" href={phoneHref} aria-label={`Call MMC Shipping Corp at ${phoneDisplay}`}>
+          <a className="nav-social" href={instagramHref} target="_blank" rel="noreferrer" aria-label="Follow Chemame Shipping on Instagram">
+            <InstagramIcon size={18} />
+          </a>
+          <a className="nav-call" href={phoneHref} aria-label={`Call Chemame Shipping at ${phoneDisplay}`}>
             <Phone size={17} aria-hidden="true" />
             <span>{phoneDisplay}</span>
           </a>
@@ -118,7 +133,7 @@ export default async function Home() {
               <p className="eyebrow"><span /> Ocean freight · United States to Africa</p>
               <h1 id="hero-heading">Your vehicle.<br /><em>Across the Atlantic.</em></h1>
               <p className="hero-lead">
-                MMC Shipping Corp handles the ocean transport of vehicles from the United States to African ports, with a dedicated service to Mauritania.
+                Chemame Shipping handles the ocean transport of vehicles from the United States to African ports, with a dedicated service to Mauritania.
               </p>
               <div className="hero-actions">
                 <a className="button button-primary" href={phoneHref}>
@@ -226,10 +241,10 @@ export default async function Home() {
               <div className="about-badge"><Anchor size={30} aria-hidden="true" /><strong>Atlantic<br />vehicle freight</strong></div>
             </div>
             <div className="about-copy">
-              <p className="eyebrow dark"><span /> About MMC Shipping Corp</p>
+              <p className="eyebrow dark"><span /> About Chemame Shipping</p>
               <h2>One focus. One ocean. A world of connections.</h2>
               <p className="about-lead">
-                MMC Shipping Corp is a vehicle shipping company operating from the United States. Our work is focused on one thing: moving cars safely across the Atlantic to Africa, with Mauritania as our main destination.
+                Chemame Shipping is a vehicle shipping company operating from the United States. Our work is focused on one thing: moving cars safely across the Atlantic to Africa, with Mauritania as our main destination.
               </p>
               <p>
                 From pick-up in the United States to arrival at the destination port, we prepare the documentation, arrange the loading and follow each shipment until it is delivered to the receiving party.
@@ -250,8 +265,11 @@ export default async function Home() {
               <h2>Let’s talk about<br />your vehicle.</h2>
             </div>
             <div className="contact-details">
-              <p>Call MMC Shipping Corp to discuss your vehicle, destination and preferred shipping method.</p>
+              <p>Call Chemame Shipping to discuss your vehicle, destination and preferred shipping method.</p>
               <a className="contact-phone" href={phoneHref}><Phone size={22} aria-hidden="true" />{phoneDisplay}</a>
+              <a className="contact-instagram" href={instagramHref} target="_blank" rel="noreferrer">
+                <InstagramIcon /> Follow @mmcshipping on Instagram
+              </a>
               <address><MapPin size={20} aria-hidden="true" /><span>5713 Elliot Ct, Apt 173</span></address>
             </div>
           </div>
@@ -262,13 +280,16 @@ export default async function Home() {
         <div className="container footer-main">
           <a className="brand" href="#top" aria-label="Back to top">
             <span className="brand-mark" aria-hidden="true"><Anchor size={25} /></span>
-            <span className="brand-copy"><strong>MMC SHIPPING CORP</strong><small>Cars to Africa & Mauritania</small></span>
+            <span className="brand-copy"><strong>CHEMAME SHIPPING</strong><small>Cars to Africa & Mauritania</small></span>
           </a>
           <p>Vehicle ocean freight from the United States to Africa.</p>
-          <a href={phoneHref}>{phoneDisplay}</a>
+          <div className="footer-links">
+            <a href={phoneHref}>{phoneDisplay}</a>
+            <a href={instagramHref} target="_blank" rel="noreferrer" aria-label="Chemame Shipping on Instagram"><InstagramIcon size={18} /> Instagram</a>
+          </div>
         </div>
         <div className="container footer-bottom">
-          <span>© {new Date().getFullYear()} MMC Shipping Corp. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Chemame Shipping. All rights reserved.</span>
           <span>5713 Elliot Ct, Apt 173</span>
         </div>
       </footer>

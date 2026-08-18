@@ -8,12 +8,12 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
   metadataBase: siteUrl,
   title: {
-    default: "MMC Shipping Corp | Car Shipping to Africa & Mauritania",
-    template: "%s | MMC Shipping Corp",
+    default: "Chemame Shipping | Car Shipping to Africa & Mauritania",
+    template: "%s | Chemame Shipping",
   },
   description:
     "Ship cars, SUVs, pickups and light trucks from the United States to Africa with dedicated service to Mauritania. Container and Ro-Ro ocean freight.",
-  applicationName: "MMC Shipping Corp",
+  applicationName: "Chemame Shipping",
   keywords: [
     "car shipping to Africa",
     "car shipping to Mauritania",
@@ -22,15 +22,15 @@ export async function generateMetadata(): Promise<Metadata> {
     "container car shipping",
     "ocean freight Mauritania",
   ],
-  authors: [{ name: "MMC Shipping Corp" }],
-  creator: "MMC Shipping Corp",
-  publisher: "MMC Shipping Corp",
+  authors: [{ name: "Chemame Shipping" }],
+  creator: "Chemame Shipping",
+  publisher: "Chemame Shipping",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "MMC Shipping Corp",
+    siteName: "Chemame Shipping",
     title: "Ship Your Vehicle to Africa with Confidence",
     description:
       "Vehicle ocean freight from the United States to African ports, with a dedicated route to Mauritania.",
@@ -39,13 +39,13 @@ export async function generateMetadata(): Promise<Metadata> {
         url: "/og.png",
         width: 1733,
         height: 909,
-        alt: "MMC Shipping Corp — Cars to Africa and Mauritania",
+        alt: "Chemame Shipping — Cars to Africa and Mauritania",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MMC Shipping Corp | USA to Africa Vehicle Shipping",
+    title: "Chemame Shipping | USA to Africa Vehicle Shipping",
     description:
       "Container and Ro-Ro vehicle shipping from the United States to Africa and Mauritania.",
     images: ["/og.png"],

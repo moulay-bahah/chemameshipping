@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
 
-const fallbackUrl = "https://mmc-shipping-corp.lovable.app";
+const fallbackUrl = "http://localhost:3000";
 const safeHostPattern = /^[a-z0-9.-]+(?::\d+)?$/i;
 
 export async function getSiteUrl(): Promise<URL> {
