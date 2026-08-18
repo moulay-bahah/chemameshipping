@@ -22,7 +22,7 @@ const phoneHref = "tel:+13476711702";
 const email = "Mouhidine.souvi@gmail.com";
 const emailHref = "mailto:Mouhidine.souvi@gmail.com";
 const facebookHref = "https://www.facebook.com/share/1FpTYprWFv/?mibextid=wwXIfr";
-const instagramHref = "https://www.instagram.com/mmcshipping?igsh=azk0MmgzYzgxNG81&utm_source=qr";
+const instagramHref = "https://www.instagram.com/cjemame_shipping?igsh=cThyZGxrOGt1eGN6";
 
 function FacebookIcon({ size = 20 }: { size?: number }) {
   return (
@@ -295,7 +295,7 @@ export default async function Home() {
                 <FacebookIcon /> Follow us on Facebook
               </a>
               <a className="contact-social" href={instagramHref} target="_blank" rel="noreferrer">
-                <InstagramIcon /> Follow @mmcshipping on Instagram
+                <InstagramIcon /> Follow us on Instagram
               </a>
               <address><MapPin size={20} aria-hidden="true" /><span>4635 Seminary Rd, Apt 304, Alexandria, VA 22304</span></address>
             </div>
