@@ -22,7 +22,7 @@ const phoneHref = "tel:+13476711702";
 const email = "Mouhidine.souvi@gmail.com";
 const emailHref = "mailto:Mouhidine.souvi@gmail.com";
 const facebookHref = "https://www.facebook.com/share/1FpTYprWFv/?mibextid=wwXIfr";
-const instagramHref = "https://www.instagram.com/cjemame_shipping?igsh=cThyZGxrOGt1eGN6";
+const instagramHref = "https://www.instagram.com/chemame_shipping?igsh=cThyZGxrOGt1eGN6";
 
 function FacebookIcon({ size = 20 }: { size?: number }) {
   return (
