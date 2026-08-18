@@ -35,14 +35,10 @@ img { max-width: 100%; }
   color: var(--white);
 }
 .nav-wrap { height: 92px; display: flex; align-items: center; gap: 32px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.brand-mark {
-  width: 48px; height: 48px; display: grid; place-items: center;
-  background: var(--orange); color: var(--navy-950); border-radius: 4px;
+.brand { display: inline-flex; align-items: center; flex-shrink: 0; }
+.brand-logo {
+  width: 184px; height: auto; display: block;
 }
-.brand-copy { display: grid; gap: 4px; }
-.brand-copy strong { font-size: 15px; letter-spacing: .07em; line-height: 1; }
-.brand-copy small { font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: #efb978; }
 .desktop-nav { margin-left: auto; display: flex; align-items: center; gap: 31px; }
 .desktop-nav a { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.78); transition: color .2s ease; }
 .desktop-nav a:hover, .desktop-nav a:focus-visible { color: var(--white); }
@@ -209,7 +205,6 @@ h1 em { color: var(--orange); font-style: normal; }
 @media (max-width: 800px) {
   .container { width: min(calc(100% - 34px), var(--container)); }
   .nav-wrap { height: 78px; }
-  .brand-mark { width: 42px; height: 42px; }
   .nav-call span { display: none; }
   .nav-call { width: 44px; padding: 0; justify-content: center; }
   .hero { min-height: auto; padding: 145px 0 70px; }
@@ -232,8 +227,7 @@ h1 em { color: var(--orange); font-style: normal; }
 
 @media (max-width: 560px) {
   body { padding-bottom: 62px; }
-  .brand-copy strong { font-size: 13px; }
-  .brand-copy small { font-size: 7px; }
+  .brand-logo { width: 132px; }
   .hero { padding-top: 125px; }
   .eyebrow { font-size: 10px; letter-spacing: .14em; }
   h1 { margin-bottom: 22px; }

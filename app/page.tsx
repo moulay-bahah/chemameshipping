@@ -94,11 +94,16 @@ export default async function Home() {
       <header className="site-header">
         <div className="container nav-wrap">
           <a className="brand" href="#top" aria-label="Chemame Shipping home">
-            <span className="brand-mark" aria-hidden="true"><Anchor size={25} strokeWidth={2.25} /></span>
-            <span className="brand-copy">
-              <strong>CHEMAME SHIPPING</strong>
-              <small>Cars to Africa & Mauritania</small>
-            </span>
+            <Image
+              className="brand-logo"
+              src="/chemame-shipping-logo-header.png"
+              alt="Chemame Shipping"
+              width={184}
+              height={86}
+              sizes="(max-width: 560px) 132px, 184px"
+              preload
+              unoptimized
+            />
           </a>
           <nav className="desktop-nav" aria-label="Primary navigation">
             <a href="#services">Services</a>
